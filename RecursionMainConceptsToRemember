@@ -1,0 +1,6 @@
+1. In recursion the first step to do before anything is to write the base case where the function will always terminate.
+
+2. In recursion the best way to solve the problem is to solve the first step and let the problem solve itself by writing the
+   required condition correctly.
+
+3. Find the recurrence relation and implement it in code and the problem will be solved in no time.
