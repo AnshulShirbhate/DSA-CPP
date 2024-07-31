@@ -13,6 +13,8 @@ void solve(vector<int> nums, vector<vector<int>> &ans, int index){
         for(int j=index; j<nums.size(); j++){
             swap(nums[index], nums[j]);
             solve(nums, ans, index+1);
+
+            //Backtrack
             swap(nums[index], nums[j]);
         }
 }

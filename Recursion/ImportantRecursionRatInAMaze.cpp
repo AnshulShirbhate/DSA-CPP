@@ -93,6 +93,9 @@ int main(){
                              {1, 1, 0 ,0},
                              {0, 1, 1, 1}};
     int n = m.size();
+    if(m[0][0] == 0){
+        return {};
+    }
     vector<string> ans = findPath(m, n);
     for(int i=0; i<ans.size();i++){
         cout<<ans[i]<<" ";

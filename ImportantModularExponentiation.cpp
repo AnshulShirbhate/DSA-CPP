@@ -6,9 +6,9 @@ int modularExponentiation(int x, int n, int m){
 
     while(n>0){
         if(n & 1){
-            res = (1LL * (res) * (x)%m) %m;
+            res = (1LL * res * x) %m;
         }
-        x = (1LL * (x)%m * (x)%m) %m;
+        x = (1LL * x * x) %m;
         n >> 1;
     }
     return res;

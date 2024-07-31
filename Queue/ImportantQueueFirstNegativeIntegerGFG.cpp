@@ -22,7 +22,7 @@ vector<int> firstNehativeIntegers(vector<int> nums, int k){
 
     //for remaining windows
     for(int i=k; i<nums.size(); i++){
-        if(!q.dempty() && i - q.front() >= k){
+        if(!q.empty() && i - q.front() >= k){
             q.pop_front();
         }
 
