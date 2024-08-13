@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// Adding the solution to the answers 2d vector
 void addSol(vector<vector<int>> &ans, vector<vector<int>> &board, int n){
     vector<int> temp;
     for(int i=0; i<n; i++){
@@ -11,6 +12,8 @@ void addSol(vector<vector<int>> &ans, vector<vector<int>> &board, int n){
     ans.push_back(temp);
 }
 
+
+// Checking if the queen can be placed on the given coordinates.
 bool isSafe(int row, int col, vector<vector<int>> &board, int n){
     int x = row;
     int y = col;

@@ -77,7 +77,7 @@ void flatten(Node *root)
 {
 
     Node *curr = root;
-    while (curr != NULL)
+    while (curr)
     {
         if (curr->left)
         {

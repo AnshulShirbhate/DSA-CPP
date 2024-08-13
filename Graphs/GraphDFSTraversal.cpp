@@ -47,5 +47,9 @@ int main(){
                                  {1, 2},
                                  {3, 4}};
     vector<vector<int>> ans = depthFirstSearch(v, e, edges);
-     
+    for(vector<int> i: ans){
+        for(int j: i){
+            cout<<j<<" "; 
+        }
+    }
 }

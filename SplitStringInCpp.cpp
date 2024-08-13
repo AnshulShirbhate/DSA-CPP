@@ -22,7 +22,7 @@ int main(){
     for(string word: ans){
         reversewords.append(word + " ");
     }
-
+    reversewords.pop_back();
     cout<<reversewords;
 
 }

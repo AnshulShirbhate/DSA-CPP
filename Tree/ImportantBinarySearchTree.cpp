@@ -74,18 +74,17 @@ void levelOrderTraversal(Node * root){
 }
 
 
-Node * insertIntoBst(Node * root, int data){
-    if(root == NULL){
+
+Node * insertIntoBst(Node *root, int data){
+    if(root==NULL){
         root = new Node(data);
         return root;
     }
-
     if(data>root->data){
-        root->right=insertIntoBst(root->right, data);
-    } else{
-        root -> left = insertIntoBst(root -> left, data);
+        root->right = insertIntoBst(root->right, data);
+    }else{
+        root->left = insertIntoBst(root->left, data);
     }
-
     return root;
 }
 

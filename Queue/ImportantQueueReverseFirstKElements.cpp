@@ -3,8 +3,22 @@
 #include<stack>
 using namespace std;
 
+void reverseQueueKElements(queue<int> &q, int k){
+    if(k == 1){
+        return;
+    }
+
+    int num = q.front();
+    q.pop();
+    reverseQueueKElements(q, k-1);
+    q.push(num);
+}
+
 queue<int> reverseElements(queue<int> q, int k)
 {
+    // Queue and K = 2
+    // [1, 2, 3, 4, 5]
+
     // stack<int> s;
 
     // for(int i=0; i<k; i++){
@@ -14,32 +28,21 @@ queue<int> reverseElements(queue<int> q, int k)
     // }
 
     // while(!s.empty()){
-    //     int val = s.top();
+    //     int num = s.top();
     //     s.pop();
-    //     q.push(val);
+    //     q.push(num);
     // }
-
-    // int t = q.size()-k;
-    // while(t--){
-    //     int val = q.front();
-    //     q.pop();
-    //     q.push(val);
-    // }
-    // return q;
-
-    stack<int> s;
-
+    queue<int> q1;
     for(int i=0; i<k; i++){
-        int num = q.front();
+        q1.push(q.front());
         q.pop();
-        s.push(num);
+    }
+    reverseQueueKElements(q1, k);
+    for(int i=0; i<k; i++){
+        q.push(q1.front());
+        q1.pop();
     }
 
-    while(!s.empty()){
-        int num = s.top();
-        s.pop();
-        q.push(num);
-    }
 
     for(int i=0; i<q.size()-k; i++){
         int num = q.front();

@@ -41,7 +41,6 @@ string removeDuplicates(string &s, unordered_set<char> st){
         }
         i++;
     }
-    cout<<i<<endl;
     return s;
 }
 

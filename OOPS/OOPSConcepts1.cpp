@@ -141,7 +141,7 @@ using namespace std;
 /*
     Static functions:
     Static function are functions that can be accessed without creating the class object.
-    It does not have this keyword as this keyword points to the current object and static functions doesxz not require an object to be 
+    It does not have this keyword as this keyword points to the current object and static functions does not require an object to be 
     created.
     Static functions can access only static data members of the class.
 */

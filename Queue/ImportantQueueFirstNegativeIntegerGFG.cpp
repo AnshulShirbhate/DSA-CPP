@@ -26,7 +26,7 @@ vector<int> firstNehativeIntegers(vector<int> nums, int k){
             q.pop_front();
         }
 
-        if(A[i]<0){
+        if(nums[i]<0){
             q.push_back(i);
         }
 
@@ -44,5 +44,8 @@ vector<int> firstNehativeIntegers(vector<int> nums, int k){
 int main(){
     vector<int> nums = {1, 2, -3, 4, -6, -7, 10, 11, 12, 14, -20};
     vector<int> ans = firstNehativeIntegers(nums, 2);
+    for(int i: ans){
+        cout<<i<<" ";
+    }
 }
 

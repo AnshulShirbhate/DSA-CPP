@@ -59,5 +59,8 @@ public:
 int main(){
     Queue q;
     q.enqueue(5);
-    cout<<q.dequeue();
+    q.enqueue(10);
+    cout<<q.front()<<endl;
+    cout<<q.dequeue()<<endl;
+    cout<<q.front();
 }

@@ -94,12 +94,14 @@ void morrisTraversal(Node * root){
                 curr = curr->left;
             } else{
                 pred->right = NULL;
-                cout << curr->data << " ";
+                cout << curr->data << " "; 
                 curr = curr->right;
             }
         }
     }
+
 }
+
 
 int main(){
     Node * root = NULL;
