@@ -198,14 +198,21 @@ class TestClass{
         }
 
         void getter(){
-            cout<<"Test1: "<<test1<<endl;
+            cout<<"\nTest1: "<<test1<<endl;
             cout<<"Test2: "<<test2<<endl;
             cout<<"Test3: "<<test3;
         }
+};
+
+class ChildTest: public TestClass{
+    int var1=5;
 };
 
 int main(){
     TestClass obj(1, 2, 3);
     obj.setter(4, 5, 6);
     obj.getter();
+    ChildTest t;
+    t.setter(4, 5, 6);
+    t.getter();
 }

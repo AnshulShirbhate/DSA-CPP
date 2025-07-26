@@ -34,7 +34,6 @@ void insertNode(Node *&tail , int after, int data){
         Node * temp = new Node(data);
         temp -> next = curr -> next;
         curr -> next = temp;
-        
     }
 }
 

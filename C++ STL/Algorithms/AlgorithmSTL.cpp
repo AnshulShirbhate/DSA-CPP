@@ -28,7 +28,7 @@ int main(){
     vec.push_back(11);
 
     // This code returns boolean value 0 or 1.
-    cout<<"To check if some element is present in the vector or not Example 4: "<<binary_search(vec.begin(), vec.end(), 4);
+    cout<<"To check if some element is present in the vector or not Example 4: "<<binary_search(vec.begin(), vec.end(), 8);
 
     // To get the iterator of the element present use lower_bound method.
     cout<<"\nIndex of 5: "<<lower_bound(vec.begin(), vec.end(), 5)-vec.begin();

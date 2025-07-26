@@ -18,3 +18,34 @@ int main(){
     int size = sizeof(arr)/sizeof(arr[0]);
     cout<<arrayElementsSum(arr, size);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

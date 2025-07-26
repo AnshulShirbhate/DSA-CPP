@@ -71,8 +71,8 @@ void insertAtPos(Node * &head, Node * &tail, int pos, float data){
 
     newNode -> next = temp -> next;
     newNode -> prev = temp;
-    temp -> next = newNode;
     temp -> next -> prev = newNode;
+    temp -> next = newNode;
 }
 
 void deleteNode(Node * &head, Node * &tail, int pos){

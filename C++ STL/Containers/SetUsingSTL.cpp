@@ -1,7 +1,7 @@
 /*
 
     What is a SET?
-    Ans: A set is a data structure which stores the elements only once even if add many instances of an element such as Example 
+    Ans: A set is a data structure which stores the elements only once even if we add many instances of an element such as Example 
     5, 5 then only single 5 will be stored in the set.
 
     Another property of the set is that we cannot access random elements of the set.

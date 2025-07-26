@@ -12,7 +12,7 @@
     2. Inheritance: Inheriting properties of a base class into a sub class or child class.
 
     syntax for inheritance:
-        class BaseClass : access-modifier BaseClass{
+        class ChildClass : access-modifier BaseClass{
 
         };
     

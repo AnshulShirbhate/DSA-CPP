@@ -4,7 +4,7 @@
 #include<vector>
 using namespace std;
 
-vector<int> firstNehativeIntegers(vector<int> nums, int k){
+vector<int> firstNegativeIntegers(vector<int> nums, int k){
     vector<int> ans;
     deque<int> q;
     for(int i=0; i<k; i++){
@@ -43,7 +43,7 @@ vector<int> firstNehativeIntegers(vector<int> nums, int k){
 
 int main(){
     vector<int> nums = {1, 2, -3, 4, -6, -7, 10, 11, 12, 14, -20};
-    vector<int> ans = firstNehativeIntegers(nums, 2);
+    vector<int> ans = firstNegativeIntegers(nums, 2);
     for(int i: ans){
         cout<<i<<" ";
     }

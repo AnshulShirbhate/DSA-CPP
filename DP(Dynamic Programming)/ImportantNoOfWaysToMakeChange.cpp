@@ -2,9 +2,13 @@
 using namespace std;
 
 long solve(int *arr, int n, int value, vector<vector<long>> &dp){
-    if(n == 0){
-        return (value%arr[0]==0);
+    if(value <0 || n < 0){
+        return 0;
     }
+    if(value == 0){
+        return 1;
+    }
+    
     if(dp[n][value] != -1){
         return dp[n][value];
     }

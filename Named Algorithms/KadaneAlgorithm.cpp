@@ -1,0 +1,2 @@
+// This algorithm works on the problem maximum subarray sum and it's working is simple. It states that whenever the sum of the 
+// numbers hit less than 0 just reset the sum to 0 and continue the loop and the correct answer will be stored in the sum.

@@ -5,28 +5,54 @@
 using namespace std;
 template <typename T>
 
-class Graph{
-    public:
-    unordered_map<T, list<T>> adj;
+// class Graph{
+//     public:
+//     unordered_map<T, list<T>> adj;
 
-    void addEdge(T u, T v, bool direction){
-        adj[u].push_back(v);
-        if(direction == 0){
-            adj[v].push_back(u);
-        }
-    }
+//     void addEdge(T u, T v, bool direction){
+//         adj[u].push_back(v);
+//         if(direction == 0){
+//             adj[v].push_back(u);
+//         }
+//     }
 
-    void printAdjList(){
-        for(auto i: adj){
-            cout<<i.first<<" -> ";
-            for(auto j: i.second){
-                cout<<j<<", ";
-            }
+//     void printAdjList(){
+//         for(auto i: adj){
+//             cout<<i.first<<" -> ";
+//             for(auto j: i.second){
+//                 cout<<j<<", ";
+//             }
             
-            cout<<endl;
+//             cout<<endl;
+//         }
+//     }
+// };
+
+class Graph{
+    private:
+        unordered_map<int, list<int>> adj;
+    
+    public:
+        void addEdge(int u, int v, bool bidirectional){
+            if(bidirectional){
+                adj[u].push_back(v);
+                adj[v].push_back(u);
+            }else{
+                adj[u].push_back(v);
+            }
         }
-    }
+
+        void printAdjList(){
+            for(auto i: adj){
+                cout<<i.first<<" -> ";
+                for(auto j: i.second){
+                    cout<<j<<" ";
+                }
+                cout<<endl;
+            }
+        }
 };
+
 
 int main(){
     int n,m;

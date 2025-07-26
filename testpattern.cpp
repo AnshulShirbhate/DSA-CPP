@@ -1,29 +1,33 @@
 #include<iostream>
-#include<cmath>
 using namespace std;
 
-// int main(){
-//     int n;
-//     cin>>n;
 
-//     // Number of digits
-//     int k = log10(n)+1;
+ bool isCircularSentence(string sentence) {
+        char start = sentence[0];
+        char end = sentence[sentence.length()-1];
+        if(start != end)return false;
 
-//     // Divide number by 10 to power number of digits-1 Ex: 1551, k = 4, 10^3=1000, 1551/1000 = 1 = ans;
-//     int ans = n/pow(10,k);
-//     cout<<ans;
-// }
-
-int sumLongestPath(Node * root, int th, &lh, int &ans){
-    if(root == NULL){
-        if(th>lh){
-            ans = ans;
+        char before=sentence[0];
+        char after = sentence[sentence.length()-1];
+        for(int i=1; i<sentence.length(); i++){
+            if(i<sentence.length() && sentence[i+1] == ' '){
+                before=sentence[i];
+                after = sentence[i+2];
+                if(before != after){
+                    return false;
+                }
+            }
+            // if(sentence[i-1] == ' '){
+            //     after=sentence[i];
+            //     cout<<endl<<before<<" "<<after;
+            //     if(before != after){
+            //         return false;
+            //     }
+            // }
         }
-        return 0;
+        return true;
     }
-
-    int left = sumLongestPath(root->left, th+1, lh, ans+root->data);
-    int right = sumLongestPath(root->right, th+1, lh, ans+root->data);
-
-    return ans;
+int main(){
+   string test = "ab a a";
+   cout<<isCircularSentence(test);
 }

@@ -1,3 +1,5 @@
+// Use the topolgical sorting technique by finding the indegree of each node.
+
 #include<bits/stdc++.h>
 bool isCyclic(vector<vector<int>>& edges, int v, int e)
 {

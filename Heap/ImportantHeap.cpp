@@ -9,6 +9,10 @@
     1. Max Heap: In max heap the child nodes of the parent node are always smaller than the parent node.
     2. Min Heap: In min heap the child nodes of the parent node are always bigger than the parent node.
 
+    Any nodes left child is present at i*2 th index.
+    Right child is present at i*2+1 th index.
+    and Parent is present at i/2 index.
+
 */
 
 #include <bits/stdc++.h>
@@ -113,9 +117,11 @@ void heapify(int arr[], int n, int i)
     }
 }
 
-void heapSort(int arr[], int n){
+void heapSort(int arr[], int n)
+{
     int size = n;
-    while(size > 1){
+    while (size > 1)
+    {
         swap(arr[size], arr[1]);
         size--;
 
@@ -144,7 +150,8 @@ int main()
         cout << arr[i] << " ";
     }
     heapSort(arr, n);
-    cout<<endl<<"Heap Sort: "<<endl;
+    cout << endl
+         << "Heap Sort: " << endl;
     for (int i = 1; i <= n; i++)
     {
         cout << arr[i] << " ";

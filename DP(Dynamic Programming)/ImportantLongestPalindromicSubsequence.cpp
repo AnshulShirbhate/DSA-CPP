@@ -23,5 +23,4 @@ int longestPalindromeSubsequence(string s)
     int ind1=s.size(), ind2=s.size();
     vector<vector<int>> dp(s.size(), vector<int>(s.size(), -1));
     return solve(s, s2, ind1-1, ind2-1, dp);
-
 }

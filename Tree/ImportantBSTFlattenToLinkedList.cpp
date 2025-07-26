@@ -29,3 +29,29 @@ Node* flattenToLinkedList(BinaryTreeNode<int>* root){
 
     return newRoot;
 }
+
+Node * binaryTreeToLinkedList(Node * root){
+    Node * curr = root;
+
+    while(curr){
+        if(!curr -> left){
+            cout<<curr->data;
+            curr=curr->right;
+        } else {
+            Node * pred = curr -> left;
+            while(pred != NULL && pred -> right != curr){
+                pred = pred->right;
+            }
+
+            if(pred->right == NULL){
+                pred->right = curr;
+                curr = curr->left;
+            } else {
+                pred->right = NULL;
+                cout<<curr->data;
+                curr->left = NULL;
+                curr = curr->right;
+            }
+        }
+    }
+}

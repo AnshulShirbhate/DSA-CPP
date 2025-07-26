@@ -1,4 +1,5 @@
 // This algorithm is used to find the prime numbers in a range in lesser time complexity compared to brute force.
+// Time complexity of this algrithm is O(N log log N)
 
 #include<bits/stdc++.h>
 using namespace std;

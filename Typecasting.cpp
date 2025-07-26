@@ -6,7 +6,7 @@ int main()
     char var1 = 'A';
     int var2 = 1;
 
-    //Here as we are adding char and int values the priority for int is higher. Therefore when the output is printed the ascii value of
+    //Here as we are adding char and int values the priority for int is higher. Therefore when the output is printed, the ascii value of
     //A is considered which is 65 and added with 1 i.e. var2 and hence the result 66 is produced. 
     cout<<var1+var2;
 
